@@ -6,3 +6,5 @@ __pycache__/
 dist/
 *.egg-info/
 .env
+# lokalna konfiguracja serwera MCP ze ścieżkami z tego komputera (wzór trafi do README)
+.mcp.json
