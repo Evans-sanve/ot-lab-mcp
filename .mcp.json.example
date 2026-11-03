@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "ot-lab": {
+      "command": "uv",
+      "args": ["run", "--directory", "/absolute/path/to/this/repo", "python", "-m", "ot_mcp"]
+    }
+  }
+}

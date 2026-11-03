@@ -33,6 +33,15 @@ programistą — tłumacz po polsku, co robisz i dlaczego.
 - Test całego scenariusza: wszystkie fazy ataku wykryte, zero fałszywych alarmów na ruchu bazowym.
 - Przed zakończeniem kroku: `uv run pytest` i `uv run ruff check .` muszą przechodzić.
 
+## Pułapki, na które już trafiliśmy
+- W narzędziach MCP błędy dla użytkownika zgłaszaj jako `ToolError` (zob. `_guard` w `server.py`).
+  Zwykły `ValueError` model widzi tylko jako „Error executing tool", bez treści.
+- Projekt wspiera Pythona ≥ 3.10: bez składni z 3.12 (np. `def f[T]()`).
+- `.mcp.json` ze ścieżkami z tego komputera jest w `.gitignore`; wzór to `.mcp.json.example`.
+- W PowerShellu treść commita przekazuj plikiem (`git commit -F`), bo here-string przez stdin nie działa.
+- Serwer MCP z `.mcp.json` ładuje się dopiero przy starcie nowej sesji.
+
 ## Git
 - Commit po każdym ukończonym kroku planu. **Nie pushuj** na GitHuba bez wyraźnej zgody autora.
+- Repozytorium na GitHubie ma być **prywatne**.
 - Nie dodawaj do repo plików `.env`, kluczy ani niczego spoza zakresu projektu.
