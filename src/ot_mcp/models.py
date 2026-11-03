@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import ipaddress
 from enum import Enum
-from typing import Annotated, Literal
+from typing import Annotated, Any, Literal
 
 from pydantic import (
     AfterValidator,
@@ -131,6 +131,29 @@ class RegisterLimit(_Strict):
     name: str
     min: int
     max: int
+
+
+Severity = Literal["critical", "high", "medium", "low"]
+# kolejność sortowania: im mniejsza liczba, tym poważniejsza anomalia
+SEVERITY_ORDER = {"critical": 0, "high": 1, "medium": 2, "low": 3}
+
+
+class Anomaly(_Strict):
+    """Podejrzane zachowanie wykryte przez regułę wraz z dowodami (id zdarzeń)."""
+
+    anomaly_id: str
+    rule_id: str
+    title: str
+    severity: Severity
+    description: str
+    src_ip: PrivateIPv4
+    src_asset: str | None
+    targets: list[str]  # asset_id albo adres IP, jeśli cel nie jest znanym urządzeniem
+    first_seen: AwareDatetime
+    last_seen: AwareDatetime
+    event_count: int
+    evidence_event_ids: list[str]  # przycięte do MAX_EVIDENCE; pełna liczba w event_count
+    details: dict[str, Any] = Field(default_factory=dict)
 
 
 class AssetsFile(_Strict):
