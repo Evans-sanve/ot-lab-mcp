@@ -35,3 +35,5 @@ select = ["E", "F", "I", "UP", "B"]
 [tool.ruff.lint.per-file-ignores]
 # generator ma tabelę urządzeń, w której jedna linia = jedno urządzenie (czytelniej niż łamanie)
 "scripts/generate_data.py" = ["E501"]
+# opisy parametrów to jednozdaniowe teksty dla Claude'a; łamanie ich w kodzie tylko szkodzi
+"src/ot_mcp/server.py" = ["E501"]
