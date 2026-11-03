@@ -1,0 +1,140 @@
+{
+  "meta": {
+    "synthetic": true,
+    "generator": "scripts/generate_data.py",
+    "seed": 1337,
+    "note": "Fully synthetic lab data. No real systems, vendors, addresses or customer data."
+  },
+  "assets": [
+    {
+      "asset_id": "RTU-01",
+      "hostname": "rtu-01.ot-lab.invalid",
+      "device_type": "rtu",
+      "ip": "192.168.5.21",
+      "vendor": "Globex Automation",
+      "model": "GX-RTU-10",
+      "firmware": "3.0.2",
+      "zone": "level_0_process"
+    },
+    {
+      "asset_id": "PLC-01",
+      "hostname": "plc-01.ot-lab.invalid",
+      "device_type": "plc",
+      "ip": "192.168.10.11",
+      "vendor": "Acme Controls",
+      "model": "AC-300",
+      "firmware": "2.4.1",
+      "zone": "level_1_control"
+    },
+    {
+      "asset_id": "PLC-02",
+      "hostname": "plc-02.ot-lab.invalid",
+      "device_type": "plc",
+      "ip": "192.168.10.12",
+      "vendor": "Acme Controls",
+      "model": "AC-300",
+      "firmware": "1.9.0",
+      "zone": "level_1_control"
+    },
+    {
+      "asset_id": "PLC-03",
+      "hostname": "plc-03.ot-lab.invalid",
+      "device_type": "plc",
+      "ip": "192.168.10.13",
+      "vendor": "Acme Controls",
+      "model": "AC-500",
+      "firmware": "2.4.1",
+      "zone": "level_1_control"
+    },
+    {
+      "asset_id": "SW-CTRL-01",
+      "hostname": "sw-ctrl-01.ot-lab.invalid",
+      "device_type": "switch",
+      "ip": "192.168.10.2",
+      "vendor": "Vandelay Networks",
+      "model": "VN-24M",
+      "firmware": "5.2.0",
+      "zone": "level_1_control"
+    },
+    {
+      "asset_id": "HMI-01",
+      "hostname": "hmi-01.ot-lab.invalid",
+      "device_type": "hmi",
+      "ip": "192.168.20.21",
+      "vendor": "Globex Automation",
+      "model": "GX-Panel-12",
+      "firmware": "4.1.3",
+      "zone": "level_2_supervisory"
+    },
+    {
+      "asset_id": "HMI-02",
+      "hostname": "hmi-02.ot-lab.invalid",
+      "device_type": "hmi",
+      "ip": "192.168.20.22",
+      "vendor": "Globex Automation",
+      "model": "GX-Panel-12",
+      "firmware": "4.1.3",
+      "zone": "level_2_supervisory"
+    },
+    {
+      "asset_id": "SW-SUP-01",
+      "hostname": "sw-sup-01.ot-lab.invalid",
+      "device_type": "switch",
+      "ip": "192.168.20.2",
+      "vendor": "Vandelay Networks",
+      "model": "VN-24M",
+      "firmware": "5.2.0",
+      "zone": "level_2_supervisory"
+    },
+    {
+      "asset_id": "ENG-WS-01",
+      "hostname": "eng-ws-01.ot-lab.invalid",
+      "device_type": "engineering_workstation",
+      "ip": "192.168.30.31",
+      "vendor": "Generic PC",
+      "model": "Lab Engineering Workstation",
+      "firmware": "OS build 1.0",
+      "zone": "level_3_operations"
+    },
+    {
+      "asset_id": "HIST-01",
+      "hostname": "hist-01.ot-lab.invalid",
+      "device_type": "historian",
+      "ip": "192.168.30.41",
+      "vendor": "Initech Industrial",
+      "model": "InitechHistorian",
+      "firmware": "8.0.1",
+      "zone": "level_3_operations"
+    },
+    {
+      "asset_id": "FW-01",
+      "hostname": "fw-01.ot-lab.invalid",
+      "device_type": "firewall",
+      "ip": "172.16.40.1",
+      "vendor": "Vandelay Networks",
+      "model": "VN-FW-2",
+      "firmware": "7.1.4",
+      "zone": "level_3_5_dmz"
+    },
+    {
+      "asset_id": "JUMP-01",
+      "hostname": "jump-01.ot-lab.invalid",
+      "device_type": "jump_host",
+      "ip": "172.16.40.10",
+      "vendor": "Generic PC",
+      "model": "Lab Jump Host",
+      "firmware": "OS build 1.0",
+      "zone": "level_3_5_dmz"
+    },
+    {
+      "asset_id": "IT-WS-17",
+      "hostname": "it-ws-17.ot-lab.invalid",
+      "device_type": "workstation",
+      "ip": "10.10.4.17",
+      "vendor": "Generic PC",
+      "model": "Lab Office Workstation",
+      "firmware": "OS build 1.0",
+      "zone": "level_4_enterprise"
+    }
+  ]
+}

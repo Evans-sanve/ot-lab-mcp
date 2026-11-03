@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "synthetic": true,
+    "generator": "scripts/generate_data.py",
+    "seed": 1337,
+    "note": "Fully synthetic lab data. No real systems, vendors, addresses or customer data."
+  },
+  "common_function_codes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    15,
+    16
+  ],
+  "authorized_writers": {
+    "PLC-01": [
+      "HMI-01",
+      "ENG-WS-01"
+    ],
+    "PLC-02": [
+      "HMI-02",
+      "ENG-WS-01"
+    ],
+    "PLC-03": [
+      "ENG-WS-01"
+    ]
+  },
+  "register_limits": {
+    "PLC-01": {
+      "0": {
+        "name": "pump_speed_setpoint_rpm",
+        "min": 0,
+        "max": 1500
+      },
+      "1": {
+        "name": "flow_setpoint_lpm",
+        "min": 0,
+        "max": 500
+      }
+    },
+    "PLC-02": {
+      "0": {
+        "name": "valve_position_pct",
+        "min": 0,
+        "max": 100
+      },
+      "1": {
+        "name": "dosing_rate_ml_min",
+        "min": 0,
+        "max": 250
+      }
+    },
+    "PLC-03": {
+      "0": {
+        "name": "boiler_temp_setpoint_c",
+        "min": 20,
+        "max": 90
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+[project]
+name = "ot-mcp"
+version = "0.1.0"
+description = "MCP server exposing a fully synthetic OT/ICS lab (assets, Modbus events, anomaly detection, MITRE ATT&CK for ICS mapping) to Claude."
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "mcp[cli]>=2.3.0",
+]
+
+[project.scripts]
+ot-mcp = "ot_mcp.server:main"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.3",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+# E/F: podstawowe błędy, I: sortowanie importów, UP: nowoczesna składnia, B: typowe pułapki
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+# generator ma tabelę urządzeń, w której jedna linia = jedno urządzenie (czytelniej niż łamanie)
+"scripts/generate_data.py" = ["E501"]
